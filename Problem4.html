@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="style4.css">
+</head>
+
+<body>
+    <div class="gallery-container"> 
+        <div class="tabs">
+            <div class="tab" onclick="showCategory('category1')">Tabbed Image Gallery</div>
+        </div>
+        <div style="text-align: center;"><p>Click on the images below:</p></div>
+        <div class="images" id="category1">
+            <img class="image" src="img/Davinci.png" onclick="expandImage('img/Davinci.png', 'Da Vinci - The Notebooks')" alt="Da Vinci">
+            <img class="image" src="img/EnglishForTech.jpg" onclick="expandImage('img/EnglishForTech.jpg', 'English for Tech')" alt="English for Tech">
+            <img class="image" src="img/BARC.png" onclick="expandImage('img/BARC.png', 'BARC Logo')" alt="BARC Logo">
+            <img class="image" src="img/harrypotter.png" onclick="expandImage('img/harrypotter.png', 'Harry Potter and the Sorcerer\'s Stone')" alt="Harry Potter">
+        </div>
+        <br>
+        <div class="expanded-image-container" id="expandedImageContainer">
+            <img class="expanded-image" id="expandedImage" onclick="collapseImage()" alt="Expanded Image">
+            <div class="expanded-image-name" id="expandedImageName"></div>
+        </div>
+    </div>
+    <script>
+        function showCategory(category) {
+            // Hide all image categories
+            var allCategories = document.querySelectorAll('.images');
+            allCategories.forEach(function (cat) {
+                cat.style.display = 'none';
+            });
+
+            // Show the selected category
+            document.getElementById(category).style.display = 'flex';
+
+            // Highlight the active tab
+            var allTabs = document.querySelectorAll('.tab');
+            allTabs.forEach(function (tab) {
+                tab.classList.remove('active');
+            });
+            document.querySelector('.tab[data-category="' + category + '"]').classList.add('active');
+        }
+
+        function expandImage(src, name) {
+            // Show the expanded image and name
+            var expandedImageContainer = document.getElementById('expandedImageContainer');
+            var expandedImage = document.getElementById('expandedImage');
+            var expandedImageName = document.getElementById('expandedImageName');
+
+            expandedImage.src = src;
+            expandedImageName.textContent = name;
+            expandedImageContainer.style.display = 'block';
+
+            // Disable scrolling when the image is expanded
+            document.body.style.overflow = 'hidden';
+        }
+
+        function collapseImage() {
+            // Hide the expanded image
+            var expandedImageContainer = document.getElementById('expandedImageContainer');
+            expandedImageContainer.style.display = 'none';
+
+            // Enable scrolling when the image is collapsed
+            document.body.style.overflow = 'auto';
+        }
+
+        // Initial display, show the first category
+        showCategory('category1');
+    </script>
+</body>
+
+</html>

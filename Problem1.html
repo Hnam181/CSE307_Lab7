@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace all href values</title>
+</head>
+
+<body>
+    <p>Problem 1. Replace all href values</p>
+    <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Link 1</a>
+    <br>
+    <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Link 2</a>
+    <br>
+    <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Link 3</a>
+
+    <script>
+        function replaceHref(newHref) {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].href = newHref;
+            }
+        }
+
+        replaceHref("https://www.w3schools.com/js/default.asp")
+    </script>
+</body>
+
+</html>

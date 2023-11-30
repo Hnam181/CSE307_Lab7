@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll() Method</title>
+    <style>
+        .example {
+            background-color: #A9D8E5;
+            color: blue;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            width: 400px;
+
+        }
+
+        .Title {
+            color: #83007D;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="example">This is the first paragraph with class "example".</p>
+    <p class="example">Another paragraph with class "example".</p>
+    <p>This is a regular paragraph</p>
+    <p><a href="https://www.w3schools.com/jsref/met_document_queryselectorall.asp" class="links">Link with target attribute</a>
+    </p>
+    <p><a href="https://www.w3schools.com/jsref/met_document_queryselectorall.asp" class="links">Another with target attribute</a>
+    </p>
+    <h2 class="Title">Title 1</h2>
+    <h1 class="Title">Title 2</h1>
+    <p><button onclick="changeStyles()">Change</button></p>
+
+    <script>
+        function changeStyles() {
+            var firsP = document.querySelector(".example");
+            if (firsP) {
+                firsP.style.backgroundColor = "yellow";
+            }
+            var allEx = document.querySelectorAll('.example');
+            allEx.forEach(function (element) {
+                element.style.margin = '5px';
+                element.style.padding = '5px';
+                element.style.border = '2px solid green';
+            });
+
+            var allLinks = document.querySelectorAll(".links");
+            allLinks.forEach(function(link){
+                link.style.border = "2px solid red";
+                link.style.textDecoration = "none";
+            })
+
+            var titleElements = document.querySelectorAll('.Title');
+            titleElements.forEach(function (title) {
+                title.style.color = 'orange';
+            });
+
+        }
+    </script>
+
+</body>
+
+</html>

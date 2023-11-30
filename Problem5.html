@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Messages</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+
+<body>
+    <div>
+        <h2>Alert Messages</h2>
+        <p>Click on the "x" symbol to close the alert message.</p>
+    </div>
+    <div class="alert danger" id="dangerAlert">
+        Danger! Indicates a dangerous or potentially negative action. <span class="close-btn" onclick="closeAlert('dangerAlert')">X</span>
+    </div>
+    <div class="alert success" id="successAlert">
+        Success! Indicates a successful or positive action. <span class="close-btn" onclick="closeAlert('successAlert')">X</span>
+    </div>
+    <div class="alert info" id="infoAlert">
+        Info! Indicates a neutral informative change or action. <span class="close-btn" onclick="closeAlert('infoAlert')">X</span>
+    </div>
+
+    <div class="alert warning" id="warningAlert">
+        Warning! Indicates a warning that might need attention. <span class="close-btn" onclick="closeAlert('warningAlert')">X</span>
+    </div>
+
+    <script>
+        function showAlert(alertId) {
+            var alert = document.getElementById(alertId);
+            alert.style.display = 'block';
+            setTimeout(function () {
+                closeAlert(alertId);
+            }, 5000);
+        }
+
+        function closeAlert(alertId) {
+            var alert = document.getElementById(alertId);
+            alert.style.display = 'none';
+        }
+
+        // Examples of showing alerts
+        setTimeout(function () {
+            showAlert('dangerAlert');
+        }, 1000);
+        setTimeout(function () {
+            showAlert('successAlert');
+        }, 3000);
+        setTimeout(function () {
+            showAlert('infoAlert');
+        }, 5000);
+
+        setTimeout(function () {
+            showAlert('warningAlert');
+        }, 7000);
+    </script>
+
+</body>
+
+</html>

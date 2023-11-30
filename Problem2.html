@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Styles with querySelector</title>
+    <style>
+        .example {
+            color: green;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="example">This is a first paragraph with clas "example"</p>
+    </div>
+    <div>
+        <p>This is the first paragraph</p>
+    </div>
+    <a href="https://www.w3schools.com/js/default.asp" style="color: blue;" class="links">Link with target attribute</a>
+    <br>
+    <p> <button onclick="changeStyle()">Change</button></p>
+
+    <script>
+        function changeStyle() {
+            // Add background color 
+            var firstEx = document.querySelector('.example');
+            firstEx.style.backgroundColor = 'yellow';
+            // Add red border
+            var secLink = document.querySelector('.links');
+            secLink.style.border = '2px solid red';
+            //Change a font size and a color of the first p e
+            var firstParagraphWithParentDiv = document.querySelector("div > p");
+            firstParagraphWithParentDiv.style.fontSize = "20px";
+            firstParagraphWithParentDiv.style.color = "aqua";
+
+
+        }
+
+    </script>
+</body>
+
+</html>

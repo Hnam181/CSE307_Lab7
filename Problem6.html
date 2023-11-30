@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <table border="1" id="myForm">
+        <tr class="Row 1">
+            <td style="text-align: center;"><label><b>Fullname*</b></label></td>
+            <td colspan="2">
+                <input type="text" id="contact-name" onkeyup="validateName()" maxlength="100" />
+                <span id="name-error" style="color: red;"></span>
+            </td>
+
+        </tr>
+        <tr class="Row 2">
+            <td style="text-align: center;"><label><b>Email*</b></label></td>
+            <form>
+                <td>
+                    <input type="text" id="contact-email" maxlength="50" onkeyup="validateEmail()" />
+                    <span id="email-error" style="color: red;"></span>
+                </td>
+            </form>
+
+        </tr>
+        <tr class="Row 3">
+            <td style="text-align: center;"><label for=""><b>Password*</b></label></td>
+            <td><input type="text" id="contact-pass" maxlength="50" onkeyup="validatePass()" required
+                    placeholder="Enter your password" />
+                <span id="pass-error" style="color: red;"></span>
+            </td>
+        </tr>
+        <tr class="Row 4">
+            <td style="text-align: center;"><label for=""><b>Confirm Password*</b></label></td>
+            <td><input type="text" id="contact-cpass" maxlength="50" onkeyup="validateCpass()" required
+                    placeholder="Enter your password" />
+                <span id="cpass-error" style="color: red;"></span>
+            </td>
+        </tr>
+        <tr class="Row 5">
+            <td style="text-align: center;"><label for="phone"><b>Phone Number*</b></label></td>
+            <td><input type="text" name="phone" id="" maxlength="50" required placeholder="Enter your number " /> </td>
+        </tr>
+
+        <tr class="Row 6">
+            <td style="text-align: center;"><label for="Address"><b>Address</b></label></td>
+            <td><textarea style="width: 300px;height: 50px;"></textarea></td>
+        </tr>
+        <tr class="Row 7">
+            <td style="text-align: center;"><label for="City"><b>City</b></label></td>
+            <td><input type="text" name="City" maxlength="50" required placeholder="Enter your City " />
+                <input type="text" name="State" maxlength="50" required placeholder="Enter your State " />
+            </td>
+
+        </tr>
+        <tr class="Row 8">
+            <td style="text-align: center;"><label for="zip"><b>Zip/Postal Code</b></label></td>
+            <td><input type="text" name="phone" id="" maxlength="50" required
+                    placeholder="Enter your Zip/Postal Code " /> </td>
+        </tr>
+        <tr class="Row 9">
+            <td style="text-align: center;"><label for="Country"><b>Country</b></label></td>
+            <td>
+                <select name="" id="">
+                    <option value="1 ">Select</option>
+                    <option value="2">Viet Nam</option>
+                    <option value="3">Other</option>
+                </select>
+            </td>
+        </tr>
+        <tr class="Row 10">
+            <td style="text-align: center;"><label for="Birthday"><b>Birthday</b></label></td>
+            <td><input type="date" ame="Birthday" id="" /> </td>
+        </tr>
+        <tr class="Row 11">
+            <td style="text-align: center;"><label for="gender"><b>Gender</b></label></td>
+            <td>
+                <select name="" id="">
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                </select>
+            </td>
+        </tr>
+        <tr class="Row 12">
+            <td style="text-align: center;"><label for="starting-date"><b>Starting date</b></label></td>
+            <td>
+                <input type="radio" name="starting-date"><label>Spring</label>
+                <input type="radio" name="starting-date"><label>Summer</label>
+            </td>
+
+        </tr>
+        <tr class="Row 13">
+            <td style="text-align: center;"><label for="Comments"><b>Comments</b></label></td>
+            <td><textarea style="width: 500px; height: 80px; " required
+                    placeholder="Please send us more information"></textarea></td>
+        </tr>
+        <tr class="Row 14">
+            <td colspan="2" style="text-align: center;"><button>Submit</button></td>
+        </tr>
+    </table>
+
+    <script src="js6.js"></script>
+</body>
+
+</html>

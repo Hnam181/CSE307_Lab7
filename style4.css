@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.gallery-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    color:black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #f4f4f4;
+}
+
+.images {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image {
+    width: 150px;
+    height: 180px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.image:hover {
+    transform: scale(1.2);
+}
+
+.expanded-image-container {
+    display: none;
+    text-align: center;
+}
+
+.expanded-image {
+    max-width: 95%;
+    max-height: 60vh;
+    cursor: pointer;
+}
+
+.expanded-image-name {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.active {
+    background-color: #555;
+}
